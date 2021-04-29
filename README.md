@@ -5,4 +5,6 @@ Aplicação desenvolvida para estudo do Flutter através do curso Aprenda Flutte
 ## Temas abordados
 - Gerênciamento de estados com package provider;
 - Formulário básico;
-- Acesso da câmera.
+- Acesso da câmera;
+- Utilização do SqLite;
+- Utilização da API "Maps Static API" da Google para obter imagem com a localização atual do dispositivo.
