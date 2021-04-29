@@ -1,4 +1,4 @@
-//YOUR_API_KEY
+//YOUR_API_KEY from Maps Static API
 const GOOGLE_API_KEY = "";
 
 class LocationUtil {

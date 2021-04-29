@@ -7,4 +7,5 @@ Aplicação desenvolvida para estudo do Flutter através do curso Aprenda Flutte
 - Formulário básico;
 - Acesso da câmera;
 - Utilização do SqLite;
-- Utilização da API "Maps Static API" da Google para obter imagem com a localização atual do dispositivo.
+- Utilização da API "Maps Static API" da Google para obter imagem com a localização atual do dispositivo;
+- Utilização de package google_maps_flutter para obter mapa dinâmico do google e criar um marker onde for selecionado no mapa.
