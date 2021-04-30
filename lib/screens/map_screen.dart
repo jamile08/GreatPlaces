@@ -33,6 +33,17 @@ class _MapScreenState extends State<MapScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Selecione o Local"),
+        actions: [
+          if (!widget.isReadonly)
+            IconButton(
+              icon: Icon(Icons.check),
+              onPressed: _pickedPosition == null
+                  ? null
+                  : () {
+                      Navigator.of(context).pop(_pickedPosition);
+                    },
+            ),
+        ],
       ),
       body: GoogleMap(
         initialCameraPosition: CameraPosition(
@@ -43,12 +54,13 @@ class _MapScreenState extends State<MapScreen> {
           zoom: 13,
         ),
         onTap: widget.isReadonly ? null : _selectPosition,
-        markers: _pickedPosition == null
+        markers: (_pickedPosition == null && !widget.isReadonly)
             ? {}
             : {
                 Marker(
                   markerId: MarkerId('p1'),
-                  position: _pickedPosition,
+                  position:
+                      _pickedPosition ?? widget.initialLocation.toLatLng(),
                 ),
               },
       ),
